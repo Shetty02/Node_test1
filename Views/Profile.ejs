@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        .container{
+            display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+        }
+    </style>
+</head>
+<body>
+    <center>User Profile </center>
+    <form action="/profile" method="POST">
+        <div class="container">
+            <label for="name">Name : <%= user.name%></label>
+            <label for="username">Username : <%= user.username%></label>
+            <label for="email">Email :  <%= user.email%></label>
+            <label for="phonenumber">Phone Number :<%= user.phonenumber%> </label>
+            <label for="state">State : </label>
+            <input type="text" name="state" >
+            <label for="country">Country : </label>
+            <input type="text" name="country" >
+            <label for="college">College Name : </label>
+            <input type="text" name="college" >
+            <label for="profile">Profile Photo : </label>
+            <input type="text" name="profile" >
+            <button>Change Password</button>
+        </div>
+    </form>
+    
+    <form action='/logout' method="POST">
+        <button> Logout <button>
+     </form>
+</body>
+</html>
