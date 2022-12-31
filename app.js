@@ -15,6 +15,7 @@ const app = express();
 
 // Here we will be able to render the login & register page.
 app.set("view engine", "ejs");
+app.set('views', path.join(__dirname, 'views'));
 
 // Connection with MonogDB.
 mongoose.set('strictQuery', false);
@@ -242,7 +243,6 @@ app.post("/registration", async (req, res)=>{
     }); 
     let user = []
     app.get("/profile", isAuth, async (req, res)=>{
-
     user = await UserSchema.findOne({username : req.session.user.username}) ;
     console.log(user)
     return res.render("profile",{user : user});
