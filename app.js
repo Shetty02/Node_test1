@@ -1,5 +1,4 @@
 const express = require("express");
-const app = express();
 const validator = require("validator")
 const bcrypt = require("bcrypt")
 const mongoose = require("mongoose")
@@ -11,7 +10,9 @@ const jwt = require("jsonwebtoken")
 
 const {cleanUpandValidate, jwtSign, sendVerificationEmail} = require("./Utils/Authutils")
 const isAuth = require("./Middleware");
-// const { findById } = require("./Schema/User");
+const app = express();
+
+
 // Here we will be able to render the login & register page.
 app.set("view engine", "ejs");
 
