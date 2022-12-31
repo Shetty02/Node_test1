@@ -20,7 +20,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Connection with MonogDB.
 mongoose.set('strictQuery', false);
-const mongoURI = `mongodb+srv://NehalShetty:12345@todo-nodejs.phzdwkh.mongodb.net/Node-Test`;
+const mongoURI = `mongodb+srv://NehalShetty:12345@todo-nodejs.phzdwkh.mongodb.net/Node_Test`;
 mongoose.connect(mongoURI,{
     useNewUrlParser: true,
     useUnifiedTopology: true   
@@ -248,7 +248,7 @@ app.post("/registration", async (req, res)=>{
     console.log(user)
     return res.render("profile",{user : user});
 })
-    const PORT = process.env.PORT || 3000;   
+    const PORT = process.env.PORT || 7000;   
     app.listen(PORT, ()=>{
         console.log(`Listening of ${PORT}`);
     })
