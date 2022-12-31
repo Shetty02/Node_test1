@@ -56,7 +56,7 @@ app.get('/login', (req, res)=>{
 })
 
 app.get('/registration', (req, res)=>{
-    return res.render("register")
+    return res.render("registration")
 })
 app.post("/registration", async (req, res)=>{
     console.log(req.body); 
