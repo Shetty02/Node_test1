@@ -6,6 +6,7 @@ const session = require("express-session");
 const mongoDBSession = require("connect-mongodb-session")(session)
 const UserSchema = require("./Schema/User")
 const jwt = require("jsonwebtoken")
+const path = require("path")
 
 
 const {cleanUpandValidate, jwtSign, sendVerificationEmail} = require("./Utils/Authutils")
